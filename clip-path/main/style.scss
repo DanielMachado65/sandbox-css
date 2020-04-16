@@ -1,0 +1,126 @@
+body {
+    background: #DCF5FF;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    background-color: #DCF5FF;
+    text-shadow: 0px 1px 2px #07daa5,
+        1px 0px #ef00ff;
+}
+
+.type-of-clip-1 {
+    width: 30%;
+    background: white;
+    border-radius: 10px;
+
+    .inner {
+        background: #00B6FF;
+        padding: 1rem;
+        border-radius: 10px;
+        width: 100%;
+        clip-path: circle(10% at 0% 0%);
+        transition: clip-path .5s ease-in-out;
+
+
+        h1 {
+            color: white;
+            margin: 0;
+        }
+
+        p {
+            color: white;
+            padding: .8rem;
+        }
+    }
+
+    &:hover .inner {
+        clip-path: circle(75%);
+    }
+}
+
+
+// next element
+.type-of-clip-2 {
+    margin: 20px;
+
+    .inner {
+        background: rgb(7, 218, 165);
+        padding: 1rem;
+        border-radius: 10px;
+        width: 350px;
+        clip-path: circle(10% at 90% 10%);
+        transition: all .5s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            clip-path: circle(75%);
+            background: #00B6FF;
+        }
+
+        &:hover span {
+            color: rgba(250, 250, 250, 0);
+        }
+
+        h1 {
+            color: white;
+            margin: 0;
+        }
+
+        p {
+            color: white;
+            padding: .8rem;
+        }
+
+        span {
+            float: right;
+            position: relative;
+            color: white;
+            font-weight: bold;
+            transition: color .5s;
+            margin-right: 4%;
+        }
+    }
+}
+
+
+// next element
+.type-of-clip-3 {
+    width: 30%;
+    background: white;
+    border-radius: 10px;
+
+    .inner {
+        background: rgb(7, 218, 165);
+        padding: 1rem;
+        border-radius: 10px;
+        width: calc(100% - 2rem);
+        clip-path: inset(0% 0% 0% 100%);
+
+        transition: all .5s ease-in-out;
+        cursor: pointer;
+
+        h1 {
+            color: white;
+            margin: 0;
+        }
+
+        p {
+            color: white;
+            padding: .8rem;
+        }
+    }
+
+    &:hover .inner {
+        clip-path: inset(0% 0% 0% 0%);
+    }
+}
